@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+
+# Node/React
+node_modules/
+build/
+.env.local
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Others
+*.sqlite3
