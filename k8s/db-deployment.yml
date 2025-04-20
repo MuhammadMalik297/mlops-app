@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+        - name: db
+          image: mongo:latest  
+          ports:
+            - containerPort: 27017
+          env:
+            - name: SECRET_KEY
+              value: "ba1c75be379f899d3f5637c19e8bcd54557816a1c5b7e2ee246d5e9f5890f3e0"  
+            - name: MONGO_URI
+              value: "mongodb+srv://i212688:malik12345678@db.8llofhj.mongodb.net/?retryWrites=true&w=majority&appName=DB"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-service
+spec:
+  selector:
+    app: db
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
+  type: ClusterIP  # Use LoadBalancer or NodePort if you want external access

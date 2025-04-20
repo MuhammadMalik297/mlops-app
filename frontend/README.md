@@ -1,3 +1,31 @@
+# MLOps Assignment 2
+
+## Overview
+This project demonstrates the implementation of Machine Learning Operations (MLOps) by building a web application with a Flask backend and a frontend application. The backend serves machine learning models, handles authentication, and provides a dashboard with user-specific information.
+
+The frontend communicates with the backend to display data in an interactive user interface. The project is containerized using Docker, allowing easy setup and deployment of both the backend and frontend.
+
+## Features
+- **Backend**:
+  - User authentication via JWT tokens
+  - Secure endpoints for fetching data
+  - Flask-based API
+- **Frontend**:
+  - Displays data from the backend
+  - Responsive and interactive UI
+- **Docker**: The app is containerized with Docker to enable smooth deployment.
+
+## Setup Instructions
+
+### Prerequisites
+- Docker: Ensure Docker is installed on your machine.
+- Node.js: Required for the frontend application.
+- Python 3.x: Required for the backend application.
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
